@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>com.github.chuangkel.plugin-demo</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="MyPlugin.ID" class="com.github.chuangkel.MyPluginClassName" text="MyPluginName"
+                description="MyPluginDesc">
+            <add-to-group group-id="MainMenu" anchor="after" relative-to-action="ToolsMenu"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
+        </action>
+        <group id="MyPlugin.SampleMenu" text="Sample Menu" description="Sample menu">
+            <add-to-group group-id="MainMenu" anchor="last"  />
+            <action id="Myplugin.Textboxes" class="com.github.chuangkel.MyPluginClassName" text="Text Boxes" description="A test menu item" />
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt K"/>
+        </group>
+    </actions>
+</idea-plugin>

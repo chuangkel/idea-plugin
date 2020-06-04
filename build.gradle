@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.10'
+    // https://mvnrepository.com/artifact/org.jetbrains.intellij/org.jetbrains.intellij.gradle.plugin
+    //compile group: 'org.jetbrains.intellij', name: 'org.jetbrains.intellij.gradle.plugin', version: '0.4.21', ext: 'pom'
+
+}
+
+group 'com.github.chuangkel'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    //mavenCentral()
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    version '2018.1.5'
+}
+//patchPluginXml {
+//    changeNotes """
+//      Add change notes here.<br>
+//      <em>most HTML tags may be used</em>"""
+//}
